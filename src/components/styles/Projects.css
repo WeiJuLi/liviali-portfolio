@@ -1,0 +1,247 @@
+.projects-section {
+  min-height: 100vh;
+  width: 100%;
+  padding: 4rem 0;
+  background-color: #1c121a;
+  font-family: "Josefin Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projects-title {
+  font-size: 3rem;
+  margin-bottom: 4rem;
+  color: rgb(255, 255, 255, 0.6);
+}
+
+.projects-container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 2rem;
+}
+
+.project-item {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 6rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.project-item.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-images {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-slider {
+  position: relative;
+  width: 100%;
+  max-height: 500px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.slider-container {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  object-fit: contain;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  z-index: 2;
+}
+
+.slider-button:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.slider-button.prev {
+  left: 10px;
+}
+
+.slider-button.next {
+  right: 10px;
+}
+
+.slider-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 2;
+}
+
+.slider-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.slider-dot.active {
+  background: white;
+}
+
+.project-content {
+  flex: 1;
+  text-align: left;
+}
+
+.project-title {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.project-description {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+.highlight {
+  color: #f8a5cf;
+  font-weight: 500;
+  padding: 0.1rem 0.3rem;
+  border-radius: 4px;
+  background: rgba(248, 165, 207, 0.1);
+  transition: all 0.3s ease;
+}
+
+.highlight:hover {
+  background: rgba(182, 49, 178, 0.501);
+}
+
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.project-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.project-link svg {
+  width: 16px;
+  height: 16px;
+}
+
+.project-prize {
+  display: inline-block;
+  text-align: center;
+  margin: 0.5rem 0 1rem;
+  padding: 1rem 1rem;
+  background: linear-gradient(45deg, #f89dfb, #ffa500);
+  border-radius: 20px;
+  color: #1c121a;
+  font-weight: bold;
+  font-size: 1.3rem;
+  box-shadow: 0 2px 4px rgba(228, 160, 205, 0.3);
+  animation: prizeGlow 2s ease-in-out infinite;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-prize:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(45deg, #ffa8ff, #ffb732);
+}
+
+@keyframes prizeGlow {
+  0% {
+    box-shadow: 0 2px 4px rgba(255, 58, 219, 0.6);
+  }
+  50% {
+    box-shadow: 0 2px 12px rgba(255, 30, 214, 0.8);
+  }
+  100% {
+    box-shadow: 0 2px 4px rgba(255, 30, 214, 0.6);
+  }
+}
+
+@media (max-width: 1000px) {
+  .project-prize {
+    font-size: 1rem;
+    padding: 0.7rem 0.7rem;
+  }
+
+  .project-title {
+    font-size: 1.6rem;
+  }
+
+  .project-description {
+    font-size: 1.1rem;
+  }
+  .project-item {
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .project-images {
+    grid-template-columns: 1fr;
+  }
+
+  .project-title {
+    font-size: 1.8rem;
+  }
+
+  .project-description {
+    font-size: 1.3rem;
+  }
+}

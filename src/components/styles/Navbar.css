@@ -1,0 +1,145 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 0;
+  background-color: #f6bace;
+  backdrop-filter: blur(5px);
+  z-index: 100;
+  font-family: "Josefin Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* navbar height + some padding */
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 2rem;
+}
+
+.navbar-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-title a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.navbar-title a:hover {
+  color: #ff69b4;
+}
+
+.hamburger-button {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.hamburger-line {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(255, 255, 255);
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #ff69b4;
+}
+
+@media (max-width: 768px) {
+  .hamburger-button {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #f09fba;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .nav-links.open {
+    max-height: 300px; /* 調整為你需要的高度 */
+    opacity: 1;
+    visibility: visible;
+    padding: 1rem;
+  }
+
+  .nav-link {
+    padding: 1rem;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nav-links.open .nav-link {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* 為每個連結添加延遲動畫 */
+  .nav-links.open .nav-link:nth-child(1) {
+    transition-delay: 0.1s;
+  }
+  .nav-links.open .nav-link:nth-child(2) {
+    transition-delay: 0.2s;
+  }
+  .nav-links.open .nav-link:nth-child(3) {
+    transition-delay: 0.3s;
+  }
+  .nav-links.open .nav-link:nth-child(4) {
+    transition-delay: 0.4s;
+  }
+
+  .hamburger-line {
+    transition: all 0.3s ease-in-out;
+  }
+
+  .hamburger-line.open:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger-line.open:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-line.open:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}

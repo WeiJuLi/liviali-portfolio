@@ -1,0 +1,40 @@
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1c121a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loading-content {
+  text-align: center;
+}
+
+.loading-progress {
+  width: 200px;
+  height: 4px;
+  background: rgba(248, 165, 207, 0.2);
+  border-radius: 2px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: #f8a5cf;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+  box-shadow: 0 0 10px rgba(248, 165, 207, 0.5);
+}
+
+.loading-text {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.2rem;
+  color: #f8a5cf;
+  text-shadow: 0 0 10px rgba(248, 165, 207, 0.5);
+} 

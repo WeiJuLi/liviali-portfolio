@@ -1,0 +1,125 @@
+.contact-section {
+  min-height: 100vh;
+  width: 100%;
+  padding: 4rem 0;
+  background-color: #1c121a;
+  font-family: "Josefin Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-title {
+  font-size: 3.5rem;
+  margin-bottom: 4rem;
+  color: rgb(255, 255, 255, 0.6);
+}
+
+.contact-container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.contact-card {
+  padding: 1rem;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.contact-item {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.contact-info {
+  text-align: center;
+}
+
+.contact-info h3 {
+  font-size: 2rem;
+  color: #f8a5cf;
+  margin-bottom: 1rem;
+}
+
+.contact-info p {
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.phone-numbers {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.phone-region {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.region-label {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.phone-number {
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation delay for cards */
+.contact-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.contact-card:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.contact-card:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+@media (max-width: 768px) {
+  .contact-title {
+    font-size: 2.5rem;
+  }
+
+  .contact-container {
+    padding: 0 1rem;
+  }
+
+  .contact-info h3 {
+    font-size: 1.8rem;
+  }
+
+  .contact-info p {
+    font-size: 1.2rem;
+  }
+
+  .region-label {
+    font-size: 1.1rem;
+  }
+
+  .phone-number {
+    font-size: 1.2rem;
+  }
+}
