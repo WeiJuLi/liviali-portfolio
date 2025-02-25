@@ -104,9 +104,9 @@ export function Projects() {
       title: "2025 Amazon Web Services Hackathon – Game Builder Challenge",
       prize: "🏆 Top 9 out of 3,800 teams, Honorable Mention Winner",
       images: [
-        "/src/assets/images/project_hack_1.png",
-        "/src/assets/images/project_hack_2.png",
-        "/src/assets/images/project_hack_3.png",
+        "/liviali-portfolio/assets/images/project_hack_1.png",
+        "/liviali-portfolio/assets/images/project_hack_2.png",
+        "/liviali-portfolio/assets/images/project_hack_3.png",
       ],
       description:
         "Amazon Web Service, React.js, HTML, CSS, JavaScript, Pixi.js, SAT.js, GSAP, Google MediaPipe\n\n• Engineered a <cloud-native, React-based game incorporating an AI-powered> hand detection model, which enabled players to control a cat using voice pitch and hand gestures\n\n• Integrated real-time detection of low pitch (50-150 Hz) for ducking, high pitch (500-800 Hz) for jumping, and Google MediaPipe Hand Detection for gesture-based wall traversal\n\n• Deployed a <real-time cloud-based leaderboard> using AWS DynamoDB, API Gateway, Lambda, and IAM, ensuring fast and efficient score updates for players",
@@ -131,11 +131,11 @@ export function Projects() {
     {
       title: "Amazon Full-stack Clone Website",
       images: [
-        "/src/assets/images/project_am_1.png",
-        "/src/assets/images/project_am_2.png",
-        "/src/assets/images/project_am_3.png",
-        "/src/assets/images/project_am_4.png",
-        "/src/assets/images/project_am_5.png",
+        "/liviali-portfolio/assets/images/project_am_1.png",
+        "/liviali-portfolio/assets/images/project_am_2.png",
+        "/liviali-portfolio/assets/images/project_am_3.png",
+        "/liviali-portfolio/assets/images/project_am_4.png",
+        "/liviali-portfolio/assets/images/project_am_5.png",
       ],
       description:
         "HTML, CSS, React.js, JavaScript, Node.js, Express.js, Firebase, Stripe API\n\n• Built a <full-stack e-commerce website>, integrating user authentication, real-time shopping cart updates, and order history management using Firebase (Firestore, Authentication) to ensure responsive user interactions\n\n• Implemented <payment processing> with the <Stripe API>, enabling seamless checkout functionality",
@@ -151,6 +151,16 @@ export function Projects() {
           icon: <FaExternalLinkAlt />,
         },
       ],
+    },
+    {
+      title:
+        "Hewlett Packard Enterprise (HPE) Software Engineering Virtual Experience Program on Forage",
+      images: [
+        "/liviali-portfolio/assets/images/project_hpe_1.png",
+      ],
+      description:
+        "Java, Java Spring Boot, RESTful API, JUnit\n\n• Developed a RESTful web service using Java Spring Boot, implementing CRUD operations and utilizing JUnit for testing",
+      links: [],
     },
   ];
 

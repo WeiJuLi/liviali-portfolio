@@ -13,7 +13,7 @@ export function Navbar() {
     }
   }, [isMenuOpen]);
 
-  // 處理連結點擊
+  // 連結可點擊
   const handleLinkClick = (e) => {
     e.preventDefault();
     const targetId = e.target.getAttribute("href").slice(1);

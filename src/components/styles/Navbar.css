@@ -95,7 +95,7 @@ html {
   }
 
   .nav-links.open {
-    max-height: 300px; /* 調整為你需要的高度 */
+    max-height: 300px; 
     opacity: 1;
     visibility: visible;
     padding: 1rem;
@@ -113,7 +113,7 @@ html {
     transform: translateY(0);
   }
 
-  /* 為每個連結添加延遲動畫 */
+  /* 每個連結都要延遲動畫 */
   .nav-links.open .nav-link:nth-child(1) {
     transition-delay: 0.1s;
   }

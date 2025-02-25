@@ -3,20 +3,20 @@ import { useFrame } from "@react-three/fiber";
 import { useRef } from "react";
 
 function Model() {
-  const { scene } = useGLTF("/src/assets/models/chicken.glb");
+  const { scene } = useGLTF("/liviali-portfolio/assets/models/chicken.glb"); 
   const modelRef = useRef();
 
   useFrame(({ clock }) => {
     if (modelRef.current) {
-      // 使用正弦函數創建平滑的上下運動
+
       const y = Math.sin(clock.getElapsedTime()) * 0.1; // 0.1 控制飄動幅度
       modelRef.current.position.y = y;
 
-      // 可以添加輕微的左右搖擺
+      // 左右搖擺
       const x = Math.sin(clock.getElapsedTime() * 0.5) * 0.05; // 0.05 控制搖擺幅度
       modelRef.current.position.x = x;
 
-      // 輕微的旋轉
+      // 旋轉
       modelRef.current.rotation.y = (3 * Math.PI) / 2 + Math.sin(clock.getElapsedTime() * 0.5) * 0.1;
     }
   });

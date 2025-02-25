@@ -54,7 +54,7 @@
   height: 60vh;
 }
 
-/* 響應式設計 */
+/* Here is for RWD */
 @media (max-width: 768px) {
   .hero-title {
     font-size: 2rem;

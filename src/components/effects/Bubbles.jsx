@@ -28,14 +28,14 @@ export function Bubbles() {
       };
     };
 
-    // 初始化泡泡
+    // 初始化
     const initialBubbles = Array.from({ length: 15 }, createBubble);
     setBubbles(initialBubbles);
 
-    // 定期添加新泡泡
+    // 添加
     const interval = setInterval(() => {
       setBubbles((prev) => {
-        // 移除已完成動畫的泡泡
+        // 移除已完成
         const filtered = prev.filter((bubble) => {
           const element = document.getElementById(`bubble-${bubble.id}`);
           return (
@@ -43,7 +43,7 @@ export function Bubbles() {
           );
         });
 
-        // 保持泡泡數量在10-15個之間
+
         if (filtered.length < 10) {
           return [...filtered, createBubble()];
         }

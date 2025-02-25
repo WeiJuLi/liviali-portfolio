@@ -1,13 +1,13 @@
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useState } from "react";
-import { Navbar } from "./components/layout/Navbar";
-import { Scene } from "./components/3d/Scene";
-import { WorkExperience } from "./components/layout/WorkExperience";
-import { Bubbles } from "./components/effects/Bubbles";
-import { TypeWriter } from "./components/effects/TypeWriter";
-import { Projects } from "./components/layout/Projects";
-import { Contact } from "./components/layout/Contact";
-import { LoadingScreen } from "./components/effects/LoadingScreen";
+import { Navbar } from "./layout/Navbar";
+import { Scene } from "./3d/Scene";
+import { WorkExperience } from "./layout/WorkExperience";
+import { Bubbles } from "./effects/Bubbles";
+import { TypeWriter } from "./effects/TypeWriter";
+import { Projects } from "./layout/Projects";
+import { Contact } from "./layout/Contact";
+import { LoadingScreen } from "./effects/LoadingScreen";
 import { useProgress } from "@react-three/drei";
 import "./App.css";
 

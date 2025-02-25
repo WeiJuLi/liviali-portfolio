@@ -8,7 +8,7 @@ export function LoadingScreen({ progress = 0 }) {
     if (progress >= 100) {
       const timer = setTimeout(() => {
         setShowLoading(false);
-      }, 500); // 添加一個小延遲，使過渡更順滑
+      }, 500); 
       return () => clearTimeout(timer);
     }
   }, [progress]);
